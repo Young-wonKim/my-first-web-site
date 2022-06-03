@@ -4,23 +4,33 @@
   <title>WEB01 - css</title>
   <meta charset="utf-8">
   <style>
+   #active {
+    color: blue;
+  }
+  .saw {
+    color: red;
+  }
   a {
     color:green;
+  }
+  h1 {
+    font-size: 50px;
+    text-align: center;
   }
   </style>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <ol>
-    <li><a href="1.html">html</a></li>
-    <li><a href="2.html" style="color:blue;text-decoration: none;">CSS</a></li>
+    <li><a href="1.html" class="saw">html</a></li>
+    <li><a href="2.html" class="saw" id="active">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>
   </ol>
 <h2>생활코딩</h2>
 <a href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA" target="_blank" title="생활코딩 유튜브채널">생활코딩</a> 수업을 듣고 css를 <strong>실습</strong>해본다.
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <p><h3>웹페이지를 아름답게 디자인하고싶어! 새로운 욕망 (2장,3장)</h3>
-웹페이지를 아름답게 디자인하는 갈림길
+<h4>웹페이지를 아름답게 디자인하는 갈림길</h4>
   <ul>
     <li>html의 문법에 태그를 추가 - 쉬운길 : 1)비효율적, 2)웹의 정보의 질을 떨어뜨림</li>
     <li>CSS - 어렵지만 근본적인 해결책 :
@@ -35,7 +45,8 @@ style tag : html의 문법이면서 동시에 다음과 같은 뜻을 지닌다 
 웹페이지에 CSS를 포함시키기 위해서는 html과 CSS가 완전히 다른 언어이기 때문에 웹브라우저로 하여금 어디서부터 어디까지가 CSS인지 알 수 있게 해줘야 한다.
 <ol>
   <li>style tag를 이용</li>
-  <li>style 속성을 이용 : 적용부분에 직접 적용, 선택자(selector)를 사용할 필요 없음</li>
+  <li>style 속성을 이용 : 적용부분에 직접 적용, 선택자(selector)를 사용할 필요 없음
+    <br>ex)style="color:blue;text-decoration: none;"</li>
 </ol>
 tip) style tag사용시, 각 효과적용후 디스크립션이 시작되고 끝나는 것을 구분하기 위해서 구분자로 세미콜론(;)사용 (여러 효과가 한 줄에 있어도 잘 동작됨)
 </p>
@@ -43,6 +54,18 @@ tip) style tag사용시, 각 효과적용후 디스크립션이 시작되고 끝
 <h3>CSS의 기본문법 핵심요약 (5장)</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nC2-nJEXL2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>~06.02.2022.
+</p>
+<p><h3>CSS의 양대산맥 효과와 셀렉터 (6-7장)</h3>
+  <h4>6장 : WEB의 사이즈를 키우고 가운데정렬하기 실습 (스스로 알아내기)</h4>
+  <h4>7장</h4>
+  <ul>
+    <li> 효과에 대한 값을 셀렉터로 지정 할 시 .xxx라고 지정한다. cf) tag를 셀렉터로 지정할 시 xxx</li>
+    <li> 효과 적용 순서: 하나의 대상이 동급의 두개이상의 효과가 적용될 시, 가까운(나중에 적용된) 효과를 먼저 따른다.</li>
+    <li> 셀렉터 우선순위 : id(#) > class(.) > tag 순서 = 구체적인것이 포괄적인것 보다 우선순위! 작업의 효율! </li>
+    <li> 검색 키워드 : CSS selector </li>
+    <li> selector: 우리가 원하는 효과를 정교히 타겟팅가능, 코드의 양을 획기적으로 줄임, 하나의 코드로 전체적인 부분을 수정하는 똑똑한 코드의 토대
+  </ul>
+<br>~06.03.2022.
 </p>
 <br>
 </body>
