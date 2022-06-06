@@ -4,6 +4,9 @@
   <title>WEB01 - css</title>
   <meta charset="utf-8">
   <style>
+  body{
+    margin: 0;
+  }
    #active {
     color: blue;
   }
@@ -12,61 +15,112 @@
   }
   a {
     color:green;
+    text-decoration: none;
   }
   h1 {
     font-size: 50px;
     text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+  #navigation ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    padding-left: 25px;
+  }
+  #article{
+    padding-left: 25px;
   }
   </style>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html" class="saw">html</a></li>
-    <li><a href="2.html" class="saw" id="active">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-<h2>생활코딩</h2>
-<a href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA" target="_blank" title="생활코딩 유튜브채널">생활코딩</a> 수업을 듣고 css를 <strong>실습</strong>해본다.
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<p><h3>웹페이지를 아름답게 디자인하고싶어! 새로운 욕망 (2장,3장)</h3>
-<h4>웹페이지를 아름답게 디자인하는 갈림길</h4>
-  <ul>
-    <li>html의 문법에 태그를 추가 - 쉬운길 : 1)비효율적, 2)웹의 정보의 질을 떨어뜨림</li>
-    <li>CSS - 어렵지만 근본적인 해결책 :
-      1)정보를 가치를 높여줌 - html에서 디자인의 기능을 뺏어옴,
-      2)효율적(폭발적 효과!) 왜? 중복을 제거!
-      <br>웹페이지의 사이즈 자체를 줄여줘서 수정의 효율(유지보수) 뿐만아니라, 웹페이지 규모가 커질수록, 그 처리(속도)에도 큰 효율이 나타난다.(+가독성)</li>
-  </ul>
-style tag : html의 문법이면서 동시에 다음과 같은 뜻을 지닌다 "웹브라우저야, 이 style tag 안쪽의 내용은 CSS니까, 넌 이것을 CSS라는 언어의 문법에 맞게 해석해서 처리해야해"
-<br>  <u>디자인과 관련된 코드는 style tag안에 다 넣어 버림으로써, 이 웹의 정보(내용)에는 디자인과 관련된 코드는 단 한줄도 포함하지 않게 된다. 그럼으로써 웹 페이지가 해석될 때, 정보만을 가진 코드들을 분석해서 여러가지 작업을 각자의 의도에 맞게 해석할 수 있다. (html이 정보에 전념가능, 정보의 가치를 높여줌)</u>
-</p>
-<p><h3>CSS의 기본 문법 (4장)</h3>
-웹페이지에 CSS를 포함시키기 위해서는 html과 CSS가 완전히 다른 언어이기 때문에 웹브라우저로 하여금 어디서부터 어디까지가 CSS인지 알 수 있게 해줘야 한다.
-<ol>
-  <li>style tag를 이용</li>
-  <li>style 속성을 이용 : 적용부분에 직접 적용, 선택자(selector)를 사용할 필요 없음
-    <br>ex)style="color:blue;text-decoration: none;"</li>
-</ol>
-tip) style tag사용시, 각 효과적용후 디스크립션이 시작되고 끝나는 것을 구분하기 위해서 구분자로 세미콜론(;)사용 (여러 효과가 한 줄에 있어도 잘 동작됨)
-</p>
-<p>
-<h3>CSS의 기본문법 핵심요약 (5장)</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nC2-nJEXL2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>~06.02.2022.
-</p>
-<p><h3>CSS의 양대산맥 효과와 셀렉터 (6-7장)</h3>
-  <h4>6장 : WEB의 사이즈를 키우고 가운데정렬하기 실습 (스스로 알아내기)</h4>
-  <h4>7장</h4>
-  <ul>
-    <li> 효과에 대한 값을 셀렉터로 지정 할 시 .xxx라고 지정한다. cf) tag를 셀렉터로 지정할 시 xxx</li>
-    <li> 효과 적용 순서: 하나의 대상이 동급의 두개이상의 효과가 적용될 시, 가까운(나중에 적용된) 효과를 먼저 따른다.</li>
-    <li> 셀렉터 우선순위 : id(#) > class(.) > tag 순서 = 구체적인것이 포괄적인것 보다 우선순위! 작업의 효율! </li>
-    <li> 검색 키워드 : CSS selector </li>
-    <li> selector: 우리가 원하는 효과를 정교히 타겟팅가능, 코드의 양을 획기적으로 줄임, 하나의 코드로 전체적인 부분을 수정하는 똑똑한 코드의 토대
-  </ul>
-<br>~06.03.2022.
-</p>
-<br>
+  <div id="navigation">
+    <ol>
+      <li><a href="1.html" class="saw">html</a></li>
+      <li><a href="2.html" class="saw" id="active">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+  </div>
+  <div id="article">
+    <h2>생활코딩</h2>
+    <a href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA" target="_blank" title="생활코딩 유튜브채널">생활코딩</a> 수업을 듣고 css를 <strong>실습</strong>해본다.
+    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ok0bBJPtgJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <p><h3>웹페이지를 아름답게 디자인하고싶어! 새로운 욕망 (2장-3장)</h3>
+    <h4>웹페이지를 아름답게 디자인하는 갈림길</h4>
+      <ul>
+        <li>html의 문법에 태그를 추가 - 쉬운길 : 1)비효율적, 2)웹의 정보의 질을 떨어뜨림</li>
+        <li>CSS - 어렵지만 근본적인 해결책 :
+          1)정보를 가치를 높여줌 - html에서 디자인의 기능을 뺏어옴,
+          2)효율적(폭발적 효과!) 왜? 중복을 제거!
+          <br>웹페이지의 사이즈 자체를 줄여줘서 수정의 효율(유지보수) 뿐만아니라, 웹페이지 규모가 커질수록, 그 처리(속도)에도 큰 효율이 나타난다.(+가독성)</li>
+      </ul>
+      style tag : html의 문법이면서 동시에 다음과 같은 뜻을 지닌다 "웹브라우저야, 이 style tag 안쪽의 내용은 CSS니까, 넌 이것을 CSS라는 언어의 문법에 맞게 해석해서 처리해야해"
+      <br><u>디자인과 관련된 코드는 style tag안에 다 넣어 버림으로써, 이 웹의 정보(내용)에는 디자인과 관련된 코드는 단 한줄도 포함하지 않게 된다. 그럼으로써 웹 페이지가 해석될 때, 정보만을 가진 코드들을 분석해서 여러가지 작업을 각자의 의도에 맞게 해석할 수 있다. (html이 정보에 전념가능, 정보의 가치를 높여줌)</u>
+    </p>
+    <p><h3>CSS의 기본 문법 (4장)</h3>
+    웹페이지에 CSS를 포함시키기 위해서는 html과 CSS가 완전히 다른 언어이기 때문에 웹브라우저로 하여금 어디서부터 어디까지가 CSS인지 알 수 있게 해줘야 한다.
+    <ol>
+      <li>style tag를 이용</li>
+      <li>style 속성을 이용 : 적용부분에 직접 적용, 선택자(selector)를 사용할 필요 없음
+      <br>ex)style="color:blue;text-decoration: none;"</li>
+    </ol>
+    tip) style tag사용시, 각 효과적용후 디스크립션이 시작되고 끝나는 것을 구분하기 위해서 구분자로 세미콜론(;)사용 (여러 효과가 한 줄에 있어도 잘 동작됨)
+    </p>
+    <p><h3>CSS의 기본문법 핵심요약 (5장)</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nC2-nJEXL2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>~06.02.2022.
+    </p>
+    <p><h3>CSS의 양대산맥 효과와 셀렉터 (6-7장)</h3>
+      <h4>6장 : WEB의 사이즈를 키우고 가운데정렬하기 실습 (스스로 알아내기)</h4>
+      <h4>7장</h4>
+      <ul>
+        <li> 효과에 대한 값을 셀렉터로 지정 할 시 .xxx라고 지정한다. cf) tag를 셀렉터로 지정할 시 xxx</li>
+        <li> 효과 적용 순서: 하나의 대상이 동급의 두개이상의 효과가 적용될 시, 가까운(나중에 적용된) 효과를 먼저 따른다.</li>
+        <li> 셀렉터 우선순위 : id(#) > class(.) > tag 순서 = 구체적인것이 포괄적인것 보다 우선순위! 작업의 효율! </li>
+        <li> 검색 키워드 : CSS selector </li>
+        <li> selector: 우리가 원하는 효과를 정교히 타겟팅가능, 코드의 양을 획기적으로 줄임, 하나의 코드로 전체적인 부분을 수정하는 똑똑한 코드의 토대
+      </ul>
+    <br>~06.03.2022.
+    </p>
+    <p><h3>박스모델 (8장-9장)</h3>
+      <h4>8장 : 박스모델 개념과 이론</h4>
+      <ul>
+        <li>block: 화면 전체를 쓰는 tag </li>
+        <li>inline element: 자신의 content 크기만큼을 갖는 (부분을 쓰는) tag </li>
+        <li>cf)block과 inline은 display의 속성의 기본값일 뿐, css를 통해 언제든 바꿀 수 있다. </li>
+        <li>tip) 필요에따라 display 속성값을 none으로 할 시, tag를 보이지 않게 할 수 있다.  </li>
+        <li>/**/: CSS에서의 주석  </li>
+        <li>CSS tag의 중복을 줄이는 연습을 할것. (예제는 box.html참고)  </li>
+        <li>★ css box model : content, padding, border, margin의 개념
+        <br><img src="css_box_model.jpg"></li>
+        <li>★ web page에서 우클릭 - 검사(inspect)
+        <br>각 tag를 선택하면 어떤 css style의 영향을 받고 있는가를 일목요연히 보여줌(알 수 있음)
+        <br>css와 html이 복잡해 졌을 때, 어떤 css의 영향을 받는지 알기 어려울 때에 분석시 이런 도구를 사용 </li>
+      </ul>
+    <h4>9장 : 박스모델 실습</h4>
+    </p>
+    <p><h3>그리드 (10장-11장)</h3>
+      <h4>9장 : 그리드 개념과 이론</h4>
+      <ul>
+        <li>div: 정보의 의미를 담지 않은 무색무취의 tag. only 디자인의 의미로 사용, block level element</li>
+        <li>span: 정보의 의미를 담지 않은 무색무취의 tag. only 디자인의 의미로 사용, inline element </li>
+        <li>2개의 tag를 나란히하는 등의 배치를 하고 싶으면 그 tag들을 감싸는 부모태그를 만들어야함</li>
+        <li>columns = 열, rows = 행</li>
+        <li>최신CSS기능을 사용할 때, 그 기능을 사용해도 되는 지, 안되는 지 적절성 : 데이터에 근거해서 판단할것
+        <br>★ CanIuse.com: html,css,JavaScript들의 기술들을 현재 웹브라우저들이 얼마나 채택하고 있는지 통계를 보여주는 사이트 </li>
+        <li>10장내용) #grid ol: grid라는 id값의 tag 밑에 있는 ol tag를 의미. 본문에서 ol이 여러번 나올 수 있으니까.</li>
+      </ul>
+      <h4>10장 : 그리드 실습</h4>
+    </p>
+    <br>
+  </div>
 </body>
 </html>
