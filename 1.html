@@ -3,46 +3,52 @@
 <head>
   <title>WEB01 - html</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">html</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-<h2>생활코딩</h2>
-<a href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA" target="_blank" title="생활코딩 유튜브채널">생활코딩</a> 수업을 듣고 html을 <strong>실습</strong>해본다.
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/tZooW6PritE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<br>블라블라블라 더 써본다. 문장이 길어지면 어떻게 보기 수월하게 문단을 나눌 수 있을까? 9장에서는 그 방법인 줄바꿈을 배운다.
-<p>그란데말입니다, <u>줄바꿈 태그는 두가지가 있더라구요?</u> break line tag와, paragragh tag 두가지입니다. 단순히 줄바꿈을 뜻하는 br tag와 달리, 한 문단/단락을 표시하는 paragragh tag는 열림 tag와 닫힘 tag로 구성이 되어 있다.</p>
-<p>생활코딩선생님은 p tag가 정보로서 더 가치있는 html이라고 하셨다. <br> br tag는 단순히 줄바꿈의 기능만을 갖기 때문이다. 내가 봐도 br tag는 형태적이나 사용적으로도 조금 다른것 같다. 단순히 줄을 바꾸는 만큼 두번 세번 쓰는 만큼 줄이 바뀐다. 그런데 p tag는 정해진 여백만큼 줄이 바뀌고 형태가 잡히는것 같다. (이 여백의 정도-단락과 달락사이의 여백크기-는 css에서 조절이 가능한것 같다. 일단은 스킵~) 그리고 br tag는 p tag안에서도 사용이 가능하다!</p>
-<h3>html이 중요한 이유 (10장)</h3>
-html을 정확히 쓰는것은 비즈니스적으로도 굉장히 중요하다. 우리가 웹에서 검색을 하고, 그 검색엔진이 우리의 정보를 노출시킬때에 검색엔진의 판단기준이 되기 때문이다. 검색엔진의 노출은 우리의 미래와 비즈니스에 굉장한 변수이자 영향력을 끼친다. <br>그리고 이런 비즈니스적인 측면 뿐만 아니라, 휴머니즘 적인 측면에서도 중요하다. 우리가 어떤 웹과 기술을 사용할 때, 단순히 시각적인 측면만 고려해서 기능을 제대로 사용하지 않는다면, 시각장애인 등 그 기술과 정보가 필요한 사람들에게 제대로 전달되지 않을 수 있다. 심지어 그 정보는 존재하지 않게 되는 것이다. 그래서 우리는 <u>html을 정확히 이해하고, 그 의미에 맞게 사용</u>하여야한다.
-<h3>최후의 문법 속성 & img (11장)</h3>
-image 참고 사이트 추천 (저작권프리) : <a href="https://unsplash.com/" target="_blank">unsplash.com</a>
-<br>글만 주루룩 있는 웹이 허전하다. 이미지로도 채울 수 없을까?? 그럴땐, img tag를 사용한다.
-<br>그런데 어떤 이미지?? 이 이미지에 대한 정보는 태그의 이름만으로는 알 수 없다. (정보가 부족해!) 그럴때 속성(source)를 사용하는 것이다.(※ src="파일이름", 속성끼리의 순서는 중요하지 않다.)
-<br><br><img src="coding.jpg"><br><img src="informations.jpg"><br>2/13일 2일차<br>
-<h3>부모자식태그와 목록 (12장)</h3>
-목록 태그는 List의 첫 두글자인 li tag이다.
-<br>여기서 팁!
-<ul>
-  <li>1.(윈도우 기준) ctrl을 누른 상태로 여러 줄을 다중선택할 수 있고, 그 상태에서 태그나 내용등을 입력하면 동시에 같이 입력이 가능하다!</li>
-  <li>2.또, 다중 선택 후 tab을 사용해 들여쓰기를 할 수도 있다.</li>
-</ul>
-li tag의 부모 태그인 ul tag는 list내용이 어디서부터, 어디까지가 연관되어있는 항목인지 그룹을 지어준다. 그래서 부모태그 ul tag와 자식태그 li tag는 늘 함께이다.
-<br>그런데 이때, 이 목록의 순번이 매겨졌고, 사이사이 항목이 삭제되거나 추가되거나한다면 어떨까? 매번 그 항목들의 순번을 일일히 수정해야 할까? 정답은 No이다. ul tag를 ol tag로 바꿔보자. 순번이 자동적으로 적용된다.
-<h3>문서의 구조와 슈퍼스타들 (13장)</h3>
-문서의 구조를 보자. 이 문서의 "진짜" 제목과 본문(내용)을 구별 할 수 있나? 그를 위해서는 이 문서의 구조를 만드는 태그를 알아야 한다.
-<br>body tag는 본문이다. 우리가 찾고 보는 정보들을 나타낸다.
-<br>head tag는 본문(body tag이하내용)을 설명한다. 직접적으로 화면의 내용으로 나타나지는 않지만, 이 문서의 구조/틀이 되어 내용을 설명하는 것이다.
-<br>그리고 이 두 태그들을 휘하에둔 최상위 태그가 하나 있는데, 그것은 html tag이다. 이 문서는 html로 작성되었단 것이고, 그 위에는 관용적 표현으로 ('이 문서는 html이다'라는 뜻) !doctype html이라고 써준다.
-<h3>html tag의 제왕,인도자 링크 (14장)</h3>
-우리는 어떻게 무한한 디지털세계를 누비고 여행할 수 있을까? 정답은 링크! 이것은 심지어 검색이라는 기능도 가능케한다!
-<br>a tag는 img tag처럼 단독으로 쓰일 수 없기때문에 정보를 더 덧붙혀 주어야하므로 속성을 부여해준다. ('웹브라우저야 이 링크는 이 값을 창조해'라는 의미의 href를 사용)
-<br>(새 탭으로 링크를 열고 싶으면 target="_blank"속성을, 링크에 마우스를 갖다댔을때 알려주고 싶다면 title속성을 부여해 보자!)
-<h3>웹사이트 완성 (15장)<h3>
-
+  <div id="grid">
+    <div id="navigation">
+      <ol>
+        <li><a href="1.html">html</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+    </div>
+    <div id="article">
+      <h2>생활코딩</h2>
+      <a href="https://www.youtube.com/channel/UCvc8kv-i5fvFTJBFAk6n1SA" target="_blank" title="생활코딩 유튜브채널">생활코딩</a> 수업을 듣고 html을 <strong>실습</strong>해본다.
+      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/tZooW6PritE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      <br>블라블라블라 더 써본다. 문장이 길어지면 어떻게 보기 수월하게 문단을 나눌 수 있을까? 9장에서는 그 방법인 줄바꿈을 배운다.
+      <p>그란데말입니다, <u>줄바꿈 태그는 두가지가 있더라구요?</u> break line tag와, paragragh tag 두가지입니다. 단순히 줄바꿈을 뜻하는 br tag와 달리, 한 문단/단락을 표시하는 paragragh tag는 열림 tag와 닫힘 tag로 구성이 되어 있다.</p>
+      <p>생활코딩선생님은 p tag가 정보로서 더 가치있는 html이라고 하셨다. <br> br tag는 단순히 줄바꿈의 기능만을 갖기 때문이다. 내가 봐도 br tag는 형태적이나 사용적으로도 조금 다른것 같다. 단순히 줄을 바꾸는 만큼 두번 세번 쓰는 만큼 줄이 바뀐다. 그런데 p tag는 정해진 여백만큼 줄이 바뀌고 형태가 잡히는것 같다. (이 여백의 정도-단락과 달락사이의 여백크기-는 css에서 조절이 가능한것 같다. 일단은 스킵~) 그리고 br tag는 p tag안에서도 사용이 가능하다!</p>
+      <h3>html이 중요한 이유 (10장)</h3>
+      html을 정확히 쓰는것은 비즈니스적으로도 굉장히 중요하다. 우리가 웹에서 검색을 하고, 그 검색엔진이 우리의 정보를 노출시킬때에 검색엔진의 판단기준이 되기 때문이다. 검색엔진의 노출은 우리의 미래와 비즈니스에 굉장한 변수이자 영향력을 끼친다. <br>그리고 이런 비즈니스적인 측면 뿐만 아니라, 휴머니즘 적인 측면에서도 중요하다. 우리가 어떤 웹과 기술을 사용할 때, 단순히 시각적인 측면만 고려해서 기능을 제대로 사용하지 않는다면, 시각장애인 등 그 기술과 정보가 필요한 사람들에게 제대로 전달되지 않을 수 있다. 심지어 그 정보는 존재하지 않게 되 것이다. 그래서 우리는 <u>html을 정확히 이해하고, 그 의미에 맞게 사용</u>하여야한다.
+      <h3>최후의 문법 속성 & img (11장)</h3>
+      image 참고 사이트 추천 (저작권프리) : <a href="https://unsplash.com/" target="_blank">unsplash.com</a>
+      <br>글만 주루룩 있는 웹이 허전하다. 이미지로도 채울 수 없을까?? 그럴땐, img tag를 사용한다.
+      <br>그런데 어떤 이미지?? 이 이미지에 대한 정보는 태그의 이름만으로는 알 수 없다. (정보가 부족해!) 그럴때 속성(source)를 사용하는 것이다.(※ src="파일이름", 속성끼리의 순서는 중요하지 않다.)
+      <br><br><img src="coding.jpg"><br><img src="informations.jpg"><br>2/13일 2일차<br>
+      <h3>부모자식태그와 목록 (12장)</h3>
+      목록 태그는 List의 첫 두글자인 li tag이다.
+      <br>여기서 팁!
+      <ul>
+        <li>1.(윈도우 기준) ctrl을 누른 상태로 여러 줄을 다중선택할 수 있고, 그 상태에서 태그나 내용등을 입력하면 동시에 같이 입력이 가능하다!</li>
+        <li>2.또, 다중 선택 후 tab을 사용해 들여쓰기를 할 수도 있다.</li>
+      </ul>
+      li tag의 부모 태그인 ul tag는 list내용이 어디서부터, 어디까지가 연관되어있는 항목인지 그룹을 지어준다. 그래서 부모태그 ul tag와 자식태그 li tag는 늘 함께이다.
+      <br>그런데 이때, 이 목록의 순번이 매겨졌고, 사이사이 항목이 삭제되거나 추가되거나한다면 어떨까? 매번 그 항목들의 순번을 일일히 수정해야 할까? 정답은 No이다. ul tag를 ol tag로 바꿔보자. 순번이 자동적으로 적용된다.
+      <h3>문서의 구조와 슈퍼스타들 (13장)</h3>
+      문서의 구조를 보자. 이 문서의 "진짜" 제목과 본문(내용)을 구별 할 수 있나? 그를 위해서는 이 문서의 구조를 만드는 태그를 알아야 한다.
+      <br>body tag는 본문이다. 우리가 찾고 보는 정보들을 나타낸다.
+      <br>head tag는 본문(body tag이하내용)을 설명한다. 직접적으로 화면의 내용으로 나타나지는 않지만, 이 문서의 구조/틀이 되어 내용을 설명하는 것이다.
+      <br>그리고 이 두 태그들을 휘하에둔 최상위 태그가 하나 있는데, 그것은 html tag이다. 이 문서는 html로 작성되었단 것이고, 그 위에는 관용적 표현으로 ('이 문서는 html이다'라는 뜻) !doctype html이라고 써준다.
+      <h3>html tag의 제왕,인도자 링크 (14장)</h3>
+      우리는 어떻게 무한한 디지털세계를 누비고 여행할 수 있을까? 정답은 링크! 이것은 심지어 검색이라는 기능도 가능케한다!
+      <br>a tag는 img tag처럼 단독으로 쓰일 수 없기때문에 정보를 더 덧붙혀 주어야하므로 속성을 부여해준다. ('웹브라우저야 이 링크는 이 값을 창조해'라는 의미의 href를 사용)
+      <br>(새 탭으로 링크를 열고 싶으면 target="_blank"속성을, 링크에 마우스를 갖다댔을때 알려주고 싶다면 title속성을 부여해 보자!)
+      <h3>웹사이트 완성 (15장)<h3>
+    </div>
+  </div>
 </body>
 </html>
