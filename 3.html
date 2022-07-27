@@ -4,6 +4,12 @@
   <title>WEB01 - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <style>
+  .point{
+    font-weight: bold;
+    color:red;
+  }
+  </style>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
@@ -69,8 +75,42 @@
       <p><h3>웹브라우저 제어 (8장)</h3>
         <ul>
           <li>속성을 주고자 하는 태그가 누구인가하는것을 웹브라우저에게 JS문법으로 어떻게 하는지를 알아야 함 </li>
-          <li>다음장 중요 포인트 1. CSS의 가장  본질적이고 중요한 문법들</li>
-          <li>다음장 중요 포인트 2. JS를 이용해서 내가 제어하고자 하는 태그를 선택하는 방법 </li>
+          <li><span class='point'>다음장 중요 포인트 1. CSS의 가장  본질적이고 중요한 문법들</span></li>
+          <li><span class='point'>다음장 중요 포인트 2. JS를 이용해서 내가 제어하고자 하는 태그를 선택하는 방법</span> </li>
+        </ul>
+      </p>
+      <p><h3>CSS 기초 : style 속성, style 태그, 선택자 (9-11장)</h3>
+        <ul>
+          <li>style 속성 : css가 웹페이지(html)에 포함되는 방법</li>
+          <li>selector 선택자 : 여러개의 태그를 선택하는 방법 - 잘 사용하면 주고싶은 효과를 효율적으로 사용 가능!</li>
+          <li><span style="font-weight:bold;">div tag</span> : 어떠한 의미도 기능도 없음, 다만 css또는 JS를 통해 어떤 정보를 제어하고 싶을때 사용하는 무색 무취의 태그. but 줄바꿈기능이 있음</li>
+          <li><span style="font-weight:bold;">span tag</span> : div와 같으나 줄바꿈이 되지 않음
+          <li>.xx : class값이 xx로 지정된. => class='xx'</li>
+          <li>#xx : id값이 xx로 지정된 => id='xx'</li>
+          <li>class는 그룹핑, id는 식별 -> class에서 id를 예외로 두고 싶을때 씀 : id가 class보다 우선적!</li>
+          <li>일반 tag(span, div 등..)보다 class가 우선적</li>
+        </ul>
+      </p>
+      <p><h3>제어할 태그 선택하기 (12장)</h3>
+        <ul>
+          <li>
+          <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+          ">
+          <input type="button" value="day" onclick="
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+          ">
+          </li>
+          <li>검색어 : JavaScript select tag by css selector</li>
+          <li>query : 질의하다. 웹브라우저에게 질의하다 뭐 이런 뜻 </li>
+        </ul>
+      </p>
+      <p><h3>프로그램, 프로그래밍, 프로그래머 (13장)</h3>
+        코드의 의미를 음미해 보, 그 코드를 좀 더 복잡한 상황에서 좀 더 단순하게 만들 수 있는 중요한 테크닉들을 살펴보는 시간을 가져본다.
+        <ul>
+          <li></li>
         </ul>
       </p>
     </div>
